@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+ <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="dados.js"></script>
+  <script src="app.js" defer></script>
+  <title>FarmaCare</title>
+</head>
+<body>
+  <header>
+    <img class="logo" src="src/img/FarmaCare.png" alt="Logo" />
+
+    <div class="menu">
+      <a class="home" href="">Home</a>
+      <a class="servicos" href="">Serviços</a>
+      <a class="trabalheconosco" href="">Trabalhe conosco</a>
+      <a class="contato" href="">Contato</a>
+      <a class="sobre" href="">Sobre nós</a>
+    </div>
+
+    <div class="cadastro">
+      <a class="login" href="login.html"
+        ><i class="bi bi-box-arrow-in-right"></i> Login</a
+      >
+      <a class="registrar" href="register.html"
+        ><i class="bi bi-person-add"></i> Registrar</a
+      >
+      <button id="btn-carrinho" title="Ver carrinho">
+        <i class="bi bi-cart4"></i><span id="contador-carrinho">0</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="banner-desconto">
+    <h1>
+      Medicamentos com até <span>70%</span> de desconto!
+    </h1>
+    <button>Ver agora</button>
+  </div>
+
+  
+
+  <div class="opcoes">
+    <a href=""><i class="bi bi-list"></i>Categorias</a>
+    <a href=""><i class="fa-solid fa-motorcycle"></i>Entrega Grátis</a>
+    <a href=""><i class="bi bi-phone"></i>Baixe nosso App</a>
+    <a href=""><i class="bi bi-percent"></i>Ofertas da semana</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg" id="hero-bg">
+      <img src="src/img/4-1.jpg" alt="Imagem 1" />
+      <img src="src/img/organizacao.png" alt="Imagem 2" />
+      <img src="src/img/4-1.jpg" alt="Imagem 3" />
+      <img src="src/img/4-1.jpg" alt="Imagem 4" />
+    </div>
+  </section>
+
+  <div class="search">
+    <input
+      type="text"
+      placeholder="O que você procura?"
+      class="search-bar"
+    />
+    <i class="bi bi-search"></i>
+    <button class="search-button">Buscar</button>
+  </div>
+
+  <div class="resultados-container" id="resultados-container"></div>
+
+<section class="sobre-farmacare">
+  <div class="container-sobre">
+    <div class="imagem-sobre">
+      <img src="src/img/comprimidos.png" alt="Foto dos comprimidos" />
+    </div>
+
+    <div class="texto-sobre">
+      <h2>Sobre a Farmacare</h2>
+
+      <p>🏥 Desde 1980, a <strong>Farmacare</strong> tem como missão oferecer cuidado, confiança e qualidade para você e sua família. Com mais de quatro décadas de atuação, unimos tradição e inovação para garantir que sua saúde esteja sempre em boas mãos.</p>
+
+      <p>📦 Atendemos em loja física e online, com <span class="destaque">entrega rápida</span>, <span class="destaque">farmacêutico disponível</span> e <span class="destaque">programas de descontos</span>.</p>
+
+      <p>💉 Também oferecemos serviços como <span class="destaque">aferição de pressão</span>, <span class="destaque">glicose</span> e <span class="destaque">oximetria de pulso</span>.</p>
+
+      <p>💬 Confie em quem cuida de você com responsabilidade. <strong class="destaque">Farmacare — Tradição no cuidado, inovação na entrega.</strong></p>
+
+      <p> 💰 <span class="destaque">Programas de Descontos e Economia:</span> Trabalhamos com programas de fidelidade, descontos para aposentados e parcerias com laboratórios.</p>
+
+      <p> 🏅 <span class="destaque">Tradição e Confiança:</span> Desde 1980, construindo laços com a comunidade. Nossa história é feita com você.</p>
+
+      <p>🤝 <span class="destaque">Atendimento Humanizado:</span> Mais do que medicamentos, oferecemos escuta, orientação e cuidado.</p>
+
+      <P>📱 <span class="destaque">Inovação no Atendimento:</span> Integramos inovação ao atendimento: receba <span class="destaque"> notificações</span>, acompanhe seu pedido e fale direto com o farmacêutico pelo <span class="destaque-verde"> WhatsApp.</span></P>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section-servicos">
+  <h2>Cuidando da sua saúde! Conheça nossos serviços especializados</h2>
+  <div class="servicos-container">
+    <div class="servico">
+      <img src="src/img/aferição de pressão.png" alt="Serviço 1" />
+      <h3>Aferição de Pressão</h3>
+      <p>Monitore sua pressão arterial com nossos profissionais qualificados. Aqui na nossa farmácia, você pode aferir sua pressão arterial gratuitamente. Um cuidado simples que faz toda a diferença para sua saúde. Fale com um de nossos atendentes!</p>
+    </div>
+    <div class="servico">
+      <img src="src/img/aferição de glicose.png" alt="Serviço 2" />
+      <h3>Teste de Glicose</h3>
+      <p>Realize testes rápidos de glicose para manter sua saúde em dia. Monitore sua saúde! Faça aqui seu teste de glicose com rapidez e segurança. Um simples check-up pode fazer toda a diferença!
+</p>
+    </div>
+    <div class="servico">
+      <img src="src/img/oximetria.png" alt="Serviço 3" />
+      <h3>Oximetria de Pulso</h3>
+      <p>Verifique a oxigenação do seu sangue com nosso equipamento moderno.</p>
+    </div>
+</section> -->
+
+
+  <!-- Painel do carrinho -->
+  <div id="painel-carrinho" class="painel-carrinho oculto">
+    <h2>Carrinho</h2>
+    <div id="itens-carrinho"></div>
+    <div class="total-carrinho">
+      Total: R$ <span id="total-carrinho">0.00</span>
+    </div>
+    <button id="fechar-carrinho">Fechar</button>
+  </div>
+
+<!-- Swiper -->
+<section class="swiper-section">
+   <h2>Cuidando da sua saúde! <br> Conheça nossos serviços especializados.<i class="ri-syringe-line"></i></h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <img src="src/img/aferição de pressão.png" alt="Serviço 1" />
+          <div class="slide-text">
+            <h3>Aferição de Pressão<i class="fa-solid fa-temperature-high"></i></h3>
+            <p>
+              Monitore sua pressão arterial com nossos profissionais qualificados. Aqui na nossa farmácia, você pode aferir sua pressão arterial gratuitamente. Um cuidado simples que faz toda a diferença para sua saúde. Fale com um de nossos atendentes!
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <img src="src/img/aferição de glicose.png" alt="Serviço 2" />
+          <div class="slide-text">
+            <h3>Teste de Glicose</h3>
+            <p>
+              Realize testes rápidos de glicose para manter sua saúde em dia. Monitore sua saúde! Faça aqui seu teste de glicose com rapidez e segurança.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <img src="src/img/oximetria.png" alt="Serviço 3" />
+          <div class="slide-text">
+            <h3>Oximetria de Pulso</h3>
+            <p>
+              Verifique a oxigenação do seu sangue com nosso equipamento moderno.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+
+</section>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="swiper.js"></script>
+</body>
+</html>
