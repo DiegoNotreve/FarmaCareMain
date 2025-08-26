@@ -1,33 +1,90 @@
-const produtos = [
+const dados = [
   {
     id: 1,
-    nome: "Paracetamol 500mg",
-    preco: 9.99,
-    imagem: "src/img/paracetamol.jpg"
+    nome: "kit Pantene",
+    descricao: "Shampoo 375ml + Condicionador 175ml",
+    preco: "R$ 10,00",
+    imagem: "src/img/pantene.png"
   },
   {
     id: 2,
-    nome: "Dipirona 1g",
-    preco: 7.5,
-    imagem: "src/img/dipirona.jpg"
+    nome: "Sabonete Dove",
+    descricao: "Sabonete hidratante para pele sensível.",
+    preco: "R$ 4,50",
+    imagem: "src/img/dove.png"
   },
   {
     id: 3,
-    nome: "Ibuprofeno 400mg",
-    preco: 12.3,
-    imagem: "src/img/ibuprofeno.jpg"
+    nome: "Escova Dental Colgate",
+    descricao: "Cerdas macias para uma escovação suave.",
+    preco: "R$ 7,90",
+    imagem: "src/img/pantene.png"
   },
   {
     id: 4,
-    nome: "Água Oxigenada 10 volumes",
-    preco: 4.75,
-    imagem: "src/img/agua_oxigenada.jpg"
+    nome: "Paracetamol 500mg",
+    descricao: "Analgésico, inibidor e antitérmico",
+    preco: "R$ 2,00",
+    imagem: "src/img/paracetamol.png"
   },
+
   {
     id: 5,
-    nome: "Máscara descartável",
-    preco: 15.0,
-    imagem: "src/img/mascara.jpg"
-  }
-  // adicione mais produtos aqui se quiser
+    nome: "Paracetamol 500mg",
+    descricao: "Analgésico e antitérmico.",
+    preco: "R$ 2,00",
+    imagem: "src/img/paracetamol.png"
+  },
+
+  {
+    id: 6,
+    nome: "Paracetamol 500mg",
+    descricao: "Analgésico e antitérmico.",
+    preco: "R$ 2,00",
+    imagem: "src/img/paracetamol.png"
+  },
+
+  {
+    id: 7,
+    nome: "Paracetamol 500mg",
+    descricao: "Analgésico e antitérmico.",
+    preco: "R$ 2,00",
+    imagem: "src/img/paracetamol.png"
+  },
+
+  {
+    id: 8,
+    nome: "Paracetamol 500mg",
+    descricao: "Analgésico, inibidor e antitérmico.",
+    preco: "R$ 2,00",
+    imagem: "src/img/paracetamol.png"
+  },
+
+  {
+    id: 9,
+    nome: "Paracetamol 500mg",
+    descricao: "Analgésico e antitérmico.",
+    preco: "R$ 2,00",
+    imagem: "src/img/paracetamol.png"
+  },
+
+
+  {
+    id: 10,
+    nome: "Paracetamol 500mg",
+    descricao: "Analgésico e antitérmico.",
+    preco: "R$ 2,00",
+    imagem: "src/img/paracetamol.png"
+  },
+
+
+  {
+    id: 11,
+    nome: "Paracetamol 500mg",
+    descricao: "Analgésico e antitérmico.",
+    preco: "R$ 2,00",
+    imagem: "src/img/paracetamol.png"
+  },
+
+
 ];

@@ -1,0 +1,111 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor1: #C8102E;
+  --cor2: #DEDBDB;
+  --cor3: #fff;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+section.sobre-farmacare {
+  background-color: #fff;
+  padding: 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  height: auto;
+  background-image: url('src/img/fundo-remedios');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo-sobre {
+  width: 150px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.sobre-farmacare h2 {
+  color: var(--cor1);
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px 15px; 
+  max-width: 500px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  background-color: #fff;
+}
+
+
+.container-sobre {
+  background-color: #ffffff83;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  gap: 40px;
+  border-radius: 20px;
+  border-left: 15px solid #b10032; 
+  border-right: 2px solid #b10032;
+  border-bottom: 2px solid #b10032;
+  border-top: 2px solid #b10032;
+}
+
+.imagem-sobre img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.199);
+}
+
+.texto-sobre {
+  max-width: 600px;
+}
+
+.texto-sobre h2 {
+  color: #b10032;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.texto-sobre p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.texto-sobre .destaque {
+  color: #b10032;
+  font-weight: bold;
+}
+
+.texto-sobre .destaque-verde {
+  color: #00b135;
+  font-weight: bold;
+}
