@@ -23,18 +23,19 @@
     <script src="dados.js"></script>
     <script src="app.js" defer></script>
     <script src="busca.js" defer></script>
+    <script src="slide.js" defer></script>
     <title>FarmaCare</title>
   </head>
-  <body>
-    <header>
+  <body class="fade-in">
+    <header id="menu">
       <img class="logo" src="src/img/FarmaCare.png" alt="Logo" />
 
       <div class="menu">
-        <a class="home" href="">Home</a>
-        <a class="servicos" href="">Serviços</a>
-        <a class="trabalheconosco" href="">Trabalhe conosco</a>
-        <a class="contato" href="">Contato</a>
-        <a class="sobre" href="">Sobre nós</a>
+        <a class="home" href="#">Home</a>
+        <a class="servicos" href="#servicos">Serviços</a>
+        <a class="trabalheconosco" href="#trabalheconosco">Trabalhe conosco</a>
+        <a class="contato" href="#redes-sociais">Contato</a>
+        <a class="sobre link" href="sobre.html">Sobre nós</a>
       </div>
 
       <div class="cadastro">
@@ -52,7 +53,7 @@
 
     <div class="banner-desconto">
       <h1>Medicamentos com até <span>70%</span> de desconto!</h1>
-      <button>Ver agora</button>
+      <a href="#busca">Ver agora</a>
     </div>
 
     <div class="opcoes">
@@ -62,17 +63,19 @@
       <a href=""><i class="bi bi-percent"></i>Ofertas da semana</a>
     </div>
 
-    <section class="hero">
-      <div class="hero-bg" id="hero-bg">
-        <img src="src/img/4-1.jpg" alt="Imagem 1" />
-        <img src="src/img/organizacao.png" alt="Imagem 2" />
-        <img src="src/img/4-1.jpg" alt="Imagem 3" />
-        <img src="src/img/4-1.jpg" alt="Imagem 4" />
-      </div>
-    </section>
+ <section class="hero">
+  <div class="hero-bg" id="hero-bg">
+    <div class="slide" style="background-image: url('src/img/promoções1.png');"></div>
+    <div class="slide" style="background-image: url('src/img/promoções2.png');"></div>
+    <div class="slide" style="background-image: url('src/img/promoções3.png');"></div>
+    <div class="slide" style="background-image: url('src/img/promoções4.png');"></div>
+  </div>
+</section>
+
+
 
     <!-- BUSCA -->
-    <div class="busca">
+    <div class="busca" id="busca">
       <div class="input-caixa">
         <input type="text" placeholder="Pesquisar..." id="campo-pesquisa" />
         <i class="bi bi-search"></i>
@@ -135,7 +138,7 @@
     </div>
 
     <!-- Swiper -->
-    <section class="swiper-section">
+    <section class="swiper-section" id="servicos">
       <h2>Cuidando da sua saúde!<i class="ri-syringe-line"></i></h2>
       <h3>Conheça nossos serviços especializados.</h3>
       <div class="swiper mySwiper">
@@ -301,43 +304,60 @@
       <div class="container_footer">
         <div class="bloco1">
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Sobre nós</a></li>
-            <li><a href="">Trabalhe Conosco</a></li>
-            <li><a href="">Serviços</a></li>
-            <li><a href="">Contato</a></li>
-            <li><a href="">FAQ</a></li>
+            <li><a href="#menu">Home</a></li>
+             <li><a href="sobre.html" class="link">Sobre nós</a></li>
+            <li><a href="#trabalheconosco">Trabalhe Conosco</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#busca">Busca</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
-        <div class="bloco2">
+        <div class="bloco2" id="redes-sociais">
           <h3>Siga-nos em nossas redes</h3>
           <div class="redes-sociais">
             <a href=""><i class="bi bi-linkedin"></i></a>
             <a href=""><i class="bi bi-instagram"></i></a>
             <a href=""><i class="bi bi-whatsapp"></i></a>
-            <h4><i class="bi bi-geo-alt"></i>Nossas lojas:</h4>
-            <p>Rua Exemplo, 123 – Centro, Cidade/UF</p>
-            <p>Rua Exemplo, 123 – Centro, Cidade/UF</p>
-            <p>Rua Exemplo, 123 – Centro, Cidade/UF</p>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-twitter"></i></a>
           </div>
-       
+
+          <div class="nossas-lojas">
+            <div class="endereco">
+            <h4><i class="bi bi-geo-alt"></i>Nossas lojas:</h4>
+            <a><i class="bi bi-geo-fill"></i>Rua Exemplo, 123 – Centro, Cidade/UF</a>
+            <a><i class="bi bi-geo-fill"></i>Rua Exemplo, 123 – Centro, Cidade/UF</a>
+            <a><i class="bi bi-geo-fill"></i>Rua Exemplo, 123 – Centro, Cidade/UF</a>
+            </div>
+          </div>
       </div>
+
+
        <div class="bloco3">
         <div class="bloco3_itens">
           <img src="src/img/logo-entrega.png" alt="">
           <p>Entrega grátis</p>
-          <p>81999999999</p>
+          
           </div>
           <div class="bloco3_itens2">
             <p>Baixe nosso aplicativo</p>
-            <img src="src/img/logoplay 1.png" alt="">
-            <img src="src/img/logoplay 2.png" alt="">
+            <div class="bloco3_itens2_img">
+              <img src="src/img/logoplay 1.png" alt="">
+              <img src="src/img/logoplay 2.png" alt="">
+            </div>
           </div>
         </div>
+      </div>
 
+      <div class="container_footer2">
+        <h4>Parcelamos em até 10x sem juros</h4>
+        <div><img src="src/img/bandeiras.png" alt=""></div>
+      </div>
+        
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="swiper.js"></script>
+    <script src="fade.js"></script>
   </body>
 </html>

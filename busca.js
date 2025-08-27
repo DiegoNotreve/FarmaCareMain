@@ -52,3 +52,4 @@ document.getElementById("campo-pesquisa").addEventListener("keypress", function(
 document.addEventListener("DOMContentLoaded", () => {
   renderizarProdutos(dados.slice(0, 4));
 });
+
