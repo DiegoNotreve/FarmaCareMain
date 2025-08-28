@@ -50,6 +50,140 @@ header {
   position: relative;
 }
 
+/* dialog */
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9); /* central + scale */
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  background-image: url('src/img/trabalheconosco.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+dialog.show {
+  transform: translate(-50%, -50%) scale(1); /* escala para 1 mantendo centralização */
+  opacity: 1;
+}
+
+
+dialog::backdrop {
+  background: rgba(0,0,0,0.6);
+}
+
+.trabalhe-conosco {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+dialog h1 {
+  color: var(--cor3);
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  background-color: var(--cor1);
+  margin: 30px auto;
+  width: fit-content;
+}
+
+i {
+  color: var(--cor3);
+  margin-left: 20px;
+}
+.menu button {
+  border: none !important;
+  outline: none !important; /* remove aquela borda azul de foco */
+  cursor: pointer;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trabalhe-conosco p {
+  color: var(--cor1);
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.form-trabalho {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-trabalho input,
+.form-trabalho select,
+.form-trabalho textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: var(--cor1);
+  opacity: 0.7;
+}
+
+input:focus {
+  outline: none;            /* remove highlight azul padrão */
+  border-color: var(--cor1);    /* cor quando em foco */
+  box-shadow: 0 0 5px var(--cor1); /* sombra suave */
+}
+
+.form-trabalho label{
+  color: var(--cor3);
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-align: start;
+  background-color: var(--cor1);
+  width: fit-content;
+  border-radius: 20px;
+  padding: 0px 15px;
+}
+
+.form-trabalho button {
+  padding: 12px;
+  background: var(--cor1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 auto;
+  transition: background 0.3s;
+}
+
+.form-trabalho button:hover {
+  background: #cf6f6f;
+}
+
+
+
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -72,6 +206,7 @@ header {
   border-radius: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
+  border: none;
 }
 
 .login,
@@ -135,7 +270,7 @@ header {
   font-weight: 600;
 }
 
-.banner-desconto h1 {
+.desconto{
   font-size: 3rem;
   color: #2c2b2b;
 }
@@ -855,6 +990,7 @@ text-align: start;
 
 .fale_conosco i, .televendas i {
   padding: 10px;
+  color: var(--cor1);
 }
 
 .fale_conosco a, .televendas a {

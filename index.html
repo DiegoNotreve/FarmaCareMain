@@ -24,6 +24,7 @@
     <script src="app.js" defer></script>
     <script src="busca.js" defer></script>
     <script src="slide.js" defer></script>
+    <script src="modal.js" defer></script>
     <title>FarmaCare</title>
   </head>
   <body class="fade-in">
@@ -33,7 +34,7 @@
       <div class="menu">
         <a class="home" href="#">Home</a>
         <a class="servicos" href="#servicos">Serviços</a>
-        <a class="trabalheconosco" href="#trabalheconosco">Trabalhe conosco</a>
+        <button class="trabalheconosco" id="abrirDialog">Trabalhe conosco</button>
         <a class="contato" href="#redes-sociais">Contato</a>
         <a class="sobre link" href="sobre.html">Sobre nós</a>
       </div>
@@ -51,8 +52,49 @@
       </div>
     </header>
 
+
+
+<dialog id="trabalheDialog">
+  <h1>Faça parte do nosso time! <i class="bi bi-suitcase-lg-fill"></i></h1>
+  <section class="trabalhe-conosco">
+    <p>Estamos em busca de pessoas talentosas e apaixonadas pelo que fazem. 
+       Preencha o formulário abaixo e envie seu currículo para fazer parte da nossa equipe.</p>
+
+    <form class="form-trabalho" method="dialog">
+      <label for="nome"  >Nome completo</label>
+      <input type="text" placeholder="Digite seu nome" id="nome" name="nome" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" placeholder="Digite seu e-mail" id="email" name="email" required>
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" placeholder="Digite seu telefone" id="telefone" name="telefone">
+
+      <label for="cargo">Área de interesse</label>
+      <select id="cargo" name="cargo">
+        <option value="">Selecione...</option>
+        <option value="desenvolvimento">Farmacêutico(a)</option>
+        <option value="design">Assistente de Vendas</option>
+        <option value="marketing">Operador de caixa</option>
+        <option value="outros">Outros</option>
+      </select>
+
+      <label for="curriculo">Envie seu currículo</label>
+      <input type="file" id="curriculo" name="curriculo">
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+      <div class="botoes">
+      <button type="submit">Enviar</button>
+      <button id="fecharDialog" type="button">Fechar</button>
+      </div>
+    </form>
+  </section>
+</dialog>
+
+
     <div class="banner-desconto">
-      <h1>Medicamentos com até <span>70%</span> de desconto!</h1>
+      <h1 class="desconto">Medicamentos com até <span>70%</span> de desconto!</h1>
       <a href="#busca">Ver agora</a>
     </div>
 
@@ -294,7 +336,7 @@
         <img src="src/img/FarmaCare.png" alt="" />
 
         <div class="televendas">
-          <h3><i class="bi bi-telephone"></i>Televendas</h3>
+          <h3><i class="bi bi-telephone"></i>Delivery</h3>
           <a href="link_televendas"
             >Compre do conforto da sua casa. Atendimento online 24h</a
           >
@@ -306,7 +348,7 @@
           <ul>
             <li><a href="#menu">Home</a></li>
              <li><a href="sobre.html" class="link">Sobre nós</a></li>
-            <li><a href="#trabalheconosco">Trabalhe Conosco</a></li>
+            <li><a href="#menu">Trabalhe Conosco</a></li>
             <li><a href="#servicos">Serviços</a></li>
             <li><a href="#busca">Busca</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -359,5 +401,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="swiper.js"></script>
     <script src="fade.js"></script>
+    
   </body>
 </html>
