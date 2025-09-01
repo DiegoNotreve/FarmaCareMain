@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cor1: #C8102E;
+  --cor2: #DEDBDB;
+  --cor3: #fff;
+}
+
+/* estado inicial */
+body {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+/* classe para saída */
+body.fade-out {
+  opacity: 0;
+}
+
+
+body {
+  min-height: 100vh;
+}
+
+ a.link {
+  align-items: center;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #b10032;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+body {
+  height: 100vh;
+  background-image: url('src/img/fundo-servicos.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.perguntas-frequentes {
+width: 1000px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.perguntas-frequentes h1 {
+  font-size: 50px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-family: 'Carter One', cursive;
+  background-color: var(--cor1);
+  color: var(--cor3);
+  border-radius: 20px;
+  width: fit-content;
+  padding: 10px 20px;
+  
+
+}
+
+.faq {
+  width: 100%;
+}
+
+.faq li {
+  width: 100%;
+  margin-bottom: 10px;
+  list-style: none;
+
+}
+
+.faq li label {
+  padding: 15px 10px;
+  font-family: 'Poppins', sans-serif;
+  
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--cor1);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq li label span {
+  display: inline-block;
+  padding: 8px;
+  background-color: var(--cor3);
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.resposta p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+.faq li label::before {
+  content: '+';
+  margin-right: 10px;
+  font-size: 24px;
+  color: var(--cor3);
+}
+
+.faq input[type=checkbox] {
+  display: none;
+}
+.faq .resposta {
+  color: black;
+  padding: 0 15px; /* começa sem padding */
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  line-height: 32px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+/* quando marcado (aberto) */
+.faq input[type=checkbox]:checked + label + .resposta {
+  max-height: 400px;
+  padding: 10px 15px;
+}
+
+/* estilo do span dentro do label */
+.faq input[type=checkbox]:checked + label span {
+  background-color: #fff;
+  color: black;
+}
+
+/* ícone padrão */
+.faq label::before {
+  content: '+';
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* ícone quando aberto */
+.faq input[type=checkbox]:checked + label::before {
+  content: '-';
+}
