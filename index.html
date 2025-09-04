@@ -25,6 +25,7 @@
     <script src="busca.js" defer></script>
     <script src="slide.js" defer></script>
     <script src="modal.js" defer></script>
+    <script src="ofertas.js" defer></script>
     <title>FarmaCare</title>
   </head>
   <body class="fade-in">
@@ -34,7 +35,9 @@
       <div class="menu">
         <a class="home" href="#">Home</a>
         <a class="servicos" href="#servicos">Serviços</a>
-        <button class="trabalheconosco" id="abrirDialog">Trabalhe conosco</button>
+        <button class="trabalheconosco" id="abrirDialog">
+          Trabalhe conosco
+        </button>
         <a class="contato" href="#redes-sociais">Contato</a>
         <a class="sobre link" href="sobre.html">Sobre nós</a>
       </div>
@@ -52,50 +55,69 @@
       </div>
     </header>
 
+    <dialog id="trabalheDialog">
+      <h1>Faça parte do nosso time! <i class="bi bi-suitcase-lg-fill"></i></h1>
+      <section class="trabalhe-conosco">
+        <p>
+          Estamos em busca de pessoas talentosas e apaixonadas pelo que fazem.
+          Preencha o formulário abaixo e envie seu currículo para fazer parte da
+          nossa equipe.
+        </p>
 
+        <form class="form-trabalho" method="dialog">
+          <label for="nome">Nome completo</label>
+          <input
+            type="text"
+            placeholder="Digite seu nome"
+            id="nome"
+            name="nome"
+            required
+          />
 
-<dialog id="trabalheDialog">
-  <h1>Faça parte do nosso time! <i class="bi bi-suitcase-lg-fill"></i></h1>
-  <section class="trabalhe-conosco">
-    <p>Estamos em busca de pessoas talentosas e apaixonadas pelo que fazem. 
-       Preencha o formulário abaixo e envie seu currículo para fazer parte da nossa equipe.</p>
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            placeholder="Digite seu e-mail"
+            id="email"
+            name="email"
+            required
+          />
 
-    <form class="form-trabalho" method="dialog">
-      <label for="nome"  >Nome completo</label>
-      <input type="text" placeholder="Digite seu nome" id="nome" name="nome" required>
+          <label for="telefone">Telefone</label>
+          <input
+            type="tel"
+            placeholder="Digite seu telefone"
+            id="telefone"
+            name="telefone"
+          />
 
-      <label for="email">E-mail</label>
-      <input type="email" placeholder="Digite seu e-mail" id="email" name="email" required>
+          <label for="cargo">Área de interesse</label>
+          <select id="cargo" name="cargo">
+            <option value="">Selecione...</option>
+            <option value="desenvolvimento">Farmacêutico(a)</option>
+            <option value="design">Assistente de Vendas</option>
+            <option value="marketing">Operador de caixa</option>
+            <option value="outros">Outros</option>
+          </select>
 
-      <label for="telefone">Telefone</label>
-      <input type="tel" placeholder="Digite seu telefone" id="telefone" name="telefone">
+          <label for="curriculo">Envie seu currículo</label>
+          <input type="file" id="curriculo" name="curriculo" />
 
-      <label for="cargo">Área de interesse</label>
-      <select id="cargo" name="cargo">
-        <option value="">Selecione...</option>
-        <option value="desenvolvimento">Farmacêutico(a)</option>
-        <option value="design">Assistente de Vendas</option>
-        <option value="marketing">Operador de caixa</option>
-        <option value="outros">Outros</option>
-      </select>
-
-      <label for="curriculo">Envie seu currículo</label>
-      <input type="file" id="curriculo" name="curriculo">
-
-      <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="mensagem" rows="4"></textarea>
-      <div class="botoes">
-      <button type="submit">Enviar</button>
-      <button id="fecharDialog" type="button">Fechar</button>
-      </div>
-    </form>
-  </section>
-</dialog>
-
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+          <div class="botoes">
+            <button type="submit">Enviar</button>
+            <button id="fecharDialog" type="button">Fechar</button>
+          </div>
+        </form>
+      </section>
+    </dialog>
 
     <div class="banner-desconto">
-      <h1 class="desconto">Medicamentos com até <span>70%</span> de desconto!</h1>
-      <a href="#busca">Ver agora</a>
+      <h1 class="desconto">
+        Medicamentos com até <span>70%</span> de desconto!
+      </h1>
+      <a href="#ofertas">Ver agora</a>
     </div>
 
     <div class="opcoes">
@@ -105,16 +127,26 @@
       <a href=""><i class="bi bi-percent"></i>Ofertas da semana</a>
     </div>
 
- <section class="hero">
-  <div class="hero-bg" id="hero-bg">
-    <div class="slide" style="background-image: url('src/img/Frame\ 1.png');"></div>
-    <div class="slide" style="background-image: url('src/img/Frame\ 2.png');"></div>
-    <div class="slide" style="background-image: url('src/img/Frame\ 3.png');"></div>
-    <div class="slide" style="background-image: url('src/img/promoções3.png');"></div>
-  </div>
-</section>
-
-
+    <section class="hero">
+      <div class="hero-bg" id="hero-bg">
+        <div
+          class="slide"
+          style="background-image: url('src/img/Frame\ 1.png')"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url('src/img/Frame\ 2.png')"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url('src/img/Frame\ 3.png')"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url('src/img/Frame\ 4.png')"
+        ></div>
+      </div>
+    </section>
 
     <!-- BUSCA -->
     <div class="busca" id="busca">
@@ -324,6 +356,103 @@
       </div>
     </section>
 
+
+    <!-- SESSÃO OFERTAS -->
+
+    <section class="ofertas-semana" id="ofertas">
+  <h2>Ofertas da Semana <i class="bi bi-tag"></i></h2>
+  <p>Confira nossas promoções imperdíveis!</p>
+  <div class="ofertas-flex">
+    <!-- Card 1 -->
+    <div class="oferta-card">
+      <span class="tag-desconto">-20%</span>
+      <img src="src/img/pantene.png" alt="Vitamina C">
+      <h3>Vitamina C 500mg</h3>
+      <p class="preco">
+        <span class="antigo">R$ 39,90</span>
+        <span class="novo">R$ 31,90</span>
+      </p>
+      <button>Comprar</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="oferta-card">
+      <span class="tag-desconto">-15%</span>
+      <img src="src/img/pantene.png" alt="Shampoo Anticaspa">
+      <h3>Shampoo Anticaspa</h3>
+      <p class="preco">
+        <span class="antigo">R$ 49,90</span>
+        <span class="novo">R$ 42,40</span>
+      </p>
+      <button>Comprar</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="oferta-card">
+      <span class="tag-desconto">-30%</span>
+      <img src="src/img/pantene.png" alt="Creme Hidratante">
+      <h3>Creme Hidratante</h3>
+      <p class="preco">
+        <span class="antigo">R$ 29,90</span>
+        <span class="novo">R$ 20,90</span>
+      </p>
+      <button>Comprar</button>
+    </div>
+
+
+    <div class="oferta-card">
+      <span class="tag-desconto">-30%</span>
+      <img src="src/img/pantene.png" alt="Creme Hidratante">
+      <h3>Creme Hidratante</h3>
+      <p class="preco">
+        <span class="antigo">R$ 29,90</span>
+        <span class="novo">R$ 20,90</span>
+      </p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="oferta-card">
+      <span class="tag-desconto">-30%</span>
+      <img src="src/img/pantene.png" alt="Creme Hidratante">
+      <h3>Creme Hidratante</h3>
+      <p class="preco">
+        <span class="antigo">R$ 29,90</span>
+        <span class="novo">R$ 20,90</span>
+      </p>
+      <button>Comprar</button>
+    </div>
+
+     <div class="oferta-card">
+      <span class="tag-desconto">-30%</span>
+      <img src="src/img/pantene.png" alt="Creme Hidratante">
+      <h3>Creme Hidratante</h3>
+      <p class="preco">
+        <span class="antigo">R$ 29,90</span>
+        <span class="novo">R$ 20,90</span>
+      </p>
+      <button>Comprar</button>
+    </div>
+
+     <div class="oferta-card">
+      <span class="tag-desconto">-30%</span>
+      <img src="src/img/pantene.png" alt="Creme Hidratante">
+      <h3>Creme Hidratante</h3>
+      <p class="preco">
+        <span class="antigo">R$ 29,90</span>
+        <span class="novo">R$ 20,90</span>
+      </p>
+      <button>Comprar</button>
+    </div>
+
+   
+
+    
+    
+  </div>
+</section>
+
+
+
     <section class="contato_info">
       <div class="container_info">
         <div class="fale_conosco">
@@ -347,12 +476,14 @@
         <div class="bloco1">
           <ul>
             <li><a href="#menu">Home</a></li>
-             <li><a href="sobre.html" class="link">Sobre nós</a></li>
+            <li><a href="sobre.html" class="link">Sobre nós</a></li>
             <li><a href="#menu">Trabalhe Conosco</a></li>
             <li><a href="#servicos">Serviços</a></li>
             <li><a href="#busca">Busca</a></li>
             <li><a href="faq.html" class="link">FAQ</a></li>
           </ul>
+
+          <img src="src/img/anvisa.png" alt="" />
         </div>
         <div class="bloco2" id="redes-sociais">
           <h3>Siga-nos em nossas redes</h3>
@@ -366,26 +497,33 @@
 
           <div class="nossas-lojas">
             <div class="endereco">
-            <h4><i class="bi bi-geo-alt"></i>Nossas lojas:</h4>
-            <a><i class="bi bi-geo-fill"></i>Rua Exemplo, 123 – Centro, Cidade/UF</a>
-            <a><i class="bi bi-geo-fill"></i>Rua Exemplo, 123 – Centro, Cidade/UF</a>
-            <a><i class="bi bi-geo-fill"></i>Rua Exemplo, 123 – Centro, Cidade/UF</a>
+              <h4><i class="bi bi-geo-alt"></i>Nossas lojas:</h4>
+              <a
+                ><i class="bi bi-geo-fill"></i>Rua Exemplo, 123 – Centro,
+                Cidade/UF</a
+              >
+              <a
+                ><i class="bi bi-geo-fill"></i>Rua Exemplo, 123 – Centro,
+                Cidade/UF</a
+              >
+              <a
+                ><i class="bi bi-geo-fill"></i>Rua Exemplo, 123 – Centro,
+                Cidade/UF</a
+              >
             </div>
           </div>
-      </div>
+        </div>
 
-
-       <div class="bloco3">
-        <div class="bloco3_itens">
-          <img src="src/img/logo-entrega.png" alt="">
-          <p>Entrega grátis</p>
-          
+        <div class="bloco3">
+          <div class="bloco3_itens">
+            <img src="src/img/logo-entrega.png" alt="" />
+            <p>Entrega grátis</p>
           </div>
           <div class="bloco3_itens2">
             <p>Baixe nosso aplicativo</p>
             <div class="bloco3_itens2_img">
-              <img src="src/img/logoplay 1.png" alt="">
-              <img src="src/img/logoplay 2.png" alt="">
+              <img src="src/img/logoplay 1.png" alt="" />
+              <img src="src/img/logoplay 2.png" alt="" />
             </div>
           </div>
         </div>
@@ -393,14 +531,31 @@
 
       <div class="container_footer2">
         <h4>Parcelamos em até 10x sem juros</h4>
-        <div><img src="src/img/bandeiras.png" alt=""></div>
+        <div><img src="src/img/bandeiras.png" alt="" /></div>
+        <div class="politica">
+          <p>
+            A Farmacare respeita sua privacidade e está comprometida em proteger
+            seus dados pessoais. As informações coletadas são utilizadas apenas
+            para processar pedidos, melhorar a experiência no site e oferecer um
+            atendimento de qualidade. Nenhum dado é vendido ou compartilhado com
+            terceiros sem consentimento prévio. Ao acessar o site da Farmacare,
+            você concorda com nossos termos de uso. Os preços e promoções estão
+            sujeitos a alterações sem aviso prévio. É proibido utilizar o site
+            para atividades ilícitas ou que prejudiquem o funcionamento da
+            plataforma. As informações fornecidas neste site têm caráter
+            informativo e não substituem a orientação de profissionais de saúde.
+            Sempre consulte seu médico ou farmacêutico antes de iniciar qualquer
+            tratamento. Utilizamos cookies para melhorar sua experiência de
+            navegação, analisar tráfego e personalizar conteúdo. Você pode
+            gerenciar suas preferências de cookies a qualquer momento nas
+            configurações do seu navegador.
+          </p>
+        </div>
       </div>
-        
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="swiper.js"></script>
     <script src="fade.js"></script>
-    
   </body>
 </html>

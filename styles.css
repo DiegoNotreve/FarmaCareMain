@@ -921,6 +921,165 @@ text-align: start;
 }
 
 
+/* SESSÃO OFERTAS */
+
+/* section.ofertas {
+  padding: 40px 20px;
+  background-color: var(--cor2);
+  text-align: center;
+  height: 100vh;
+}
+
+.ofertas h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--cor1);
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cor3);
+  padding: 5px 15px;
+  border-radius: 20px;
+  width: fit-content;
+  margin: 0 auto 20px auto; 
+}
+
+.ofertas i {
+  color: var(--cor1);
+  font-size: 3rem;
+  margin-left: 1rem;
+} */
+
+.ofertas-semana {
+  background-color: var(--cor1);
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.ofertas-semana h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--cor1);
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cor3);
+  padding: 5px 15px;
+  border-radius: 20px;
+  width: fit-content;
+  margin: 0 auto 20px auto; 
+}
+
+.ofertas-semana i {
+  color: var(--cor1);
+  font-size: 3rem;
+  margin-left: 1rem;
+} 
+
+.ofertas-semana p {
+  font-size: 1.2rem;
+  color: var(--cor3);
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  max-width: 600px;
+}
+
+
+
+.ofertas-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+  padding: 30px;
+}
+
+.oferta-card {
+  width: 250px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oferta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.oferta-card img {
+  max-width: 200px;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.oferta-card h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--cor1);
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.preco {
+  margin: 10px 0;
+}
+
+.preco .antigo {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+.preco .novo {
+  font-family: 'Poppins', sans-serif;
+  color: var(--cor1);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.tag-desconto {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cor1);
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px 8px;
+  border-radius: 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.oferta-card button {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1abc9c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.oferta-card button:hover {
+  background-color: #16a085;
+}
+
+
+
 
 /* SESSÃO FOOTER */
 
@@ -1033,6 +1192,12 @@ text-align: start;
   text-decoration: underline;
 }
 
+.bloco1 img {
+  max-width: 300px;
+  height: auto;
+  margin-top: 60px;
+}
+
 .bloco2 {
   display: flex;
   flex-direction: column;
@@ -1063,7 +1228,11 @@ text-align: start;
   transition: all 0.3s ease;
 }
 
-.redes-sociais a:hover {
+.redes-sociais a i {
+  color: var(--cor1);
+}
+
+.redes-sociais i:hover {
   color: var(--cor2);
   
 }
@@ -1180,4 +1349,12 @@ text-align: start;
   max-width: 450px;
   height: auto;
   margin-bottom: 10px;
+}
+
+.politica p {
+  color: #141313;
+  opacity: 0.4;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 0.7rem;
 }
